@@ -1090,12 +1090,12 @@ class Renderer(object):
             self._main_cb_ms, self._main_db_ms = glGenRenderbuffers(2)
             glBindRenderbuffer(GL_RENDERBUFFER, self._main_cb_ms)
             glRenderbufferStorageMultisample(
-                GL_RENDERBUFFER, 4, GL_RGBA,
+                GL_RENDERBUFFER, 1, GL_RGBA,
                 self.viewport_width, self.viewport_height
             )
             glBindRenderbuffer(GL_RENDERBUFFER, self._main_db_ms)
             glRenderbufferStorageMultisample(
-                GL_RENDERBUFFER, 4, GL_DEPTH_COMPONENT24,
+                GL_RENDERBUFFER, 1, GL_DEPTH_COMPONENT24,
                 self.viewport_width, self.viewport_height
             )
             self._main_fb_ms = glGenFramebuffers(1)
